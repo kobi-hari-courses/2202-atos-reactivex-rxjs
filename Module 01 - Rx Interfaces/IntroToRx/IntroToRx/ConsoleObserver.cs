@@ -9,25 +9,39 @@ namespace IntroToRx
     public class ConsoleObserver<T> : IObserver<T>
     {
         private string _id;
+        private ConsoleColor _color;
+        private static object _lock = new object();
 
-        public ConsoleObserver(string id)
+        public ConsoleObserver(string id, ConsoleColor color)
         {
             _id = id;
+            _color = color;
+        }
+
+        private void Print(string txt)
+        {
+            lock(_lock)
+            {
+                var oldColor = Console.ForegroundColor;
+                Console.ForegroundColor = _color;
+                Console.WriteLine(txt);
+                Console.ForegroundColor = oldColor;
+            }
         }
 
         public void OnCompleted()
         {
-            Console.WriteLine($"{DateTime.Now} Observer {_id} Completed");
+            Print($"{DateTime.Now} Observer {_id} Completed");
         }
 
         public void OnError(Exception error)
         {
-            Console.WriteLine($"{DateTime.Now} Observer {_id} Error {error.Message}");
+            Print($"{DateTime.Now} Observer {_id} Error {error.Message}");
         }
 
         public void OnNext(T value)
         {
-            Console.WriteLine($"{DateTime.Now} Observer {_id} Next {value}");
+            Print($"{DateTime.Now} Observer {_id} Next {value}");
         }
     }
 }
