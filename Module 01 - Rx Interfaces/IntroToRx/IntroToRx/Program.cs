@@ -114,15 +114,14 @@ namespace IntroToRx
 
             //var observable = CreateEnumerable().ToObservable();
 
-            //var observable = CreateAsyncEnumerable().ToObservable();
+            var observable = CreateAsyncEnumerable().ToObservable();
 
             var observer1 = new ConsoleObserver<int>("First", ConsoleColor.White);
             var observer2 = new ConsoleObserver<int>("Second", ConsoleColor.Green);
 
             await Task.Delay(1000);
             Console.WriteLine($"{DateTime.Now} Subscription 1");
-
-            //observable.Subscribe(observer1);
+            observable.Subscribe(observer1);
 
             await Task.Delay(3000);
 
