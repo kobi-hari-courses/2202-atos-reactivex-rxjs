@@ -6,3 +6,4 @@
 * [Module 03 - Rx Filtering](Module%2003%20-%20Rx%20Filtering/README.md)
 * [Module 04 - Monads](Module%2004%20-%20Monad/README.md)
 * [Module 05 - Higher Order Observables](Module%2005%20-%20Higher%20Order%20Observables/README.md)
+* [Module 06 - Hot and Cold Observables](Module%2006%20-%20Hot%20and%20Cold%20Observables/README.md)
