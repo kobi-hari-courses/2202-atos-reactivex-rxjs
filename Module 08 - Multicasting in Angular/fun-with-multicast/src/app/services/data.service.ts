@@ -10,7 +10,7 @@ export class DataService {
   private dataSource$: Observable<number>;
 
   constructor() {
-    const cold$ = timer(5000).pipe(mapTo(42));
+    const cold$ = interval(2000).pipe(take(10));
 
     this.dataSource$ = cold$.pipe(
       tap({
@@ -19,8 +19,7 @@ export class DataService {
         error: err => console.log('error ' + err)
       }),
       shareReplay({
-        windowTime: 4000, 
-        bufferSize: 1, 
+        bufferSize: 3, 
         refCount: true
       })
     );
