@@ -8,3 +8,4 @@
 * [Module 05 - Higher Order Observables](Module%2005%20-%20Higher%20Order%20Observables/README.md)
 * [Module 06 - Hot and Cold Observables](Module%2006%20-%20Hot%20and%20Cold%20Observables/README.md)
 * [Module 07 - Hot and Cold Observables Contd](Module%2007%20-%20Hot%20and%20Cold%20Observables/README.md)
+* [Module 08 - Multicast operators in Angular](Module%2008%20-%20Multicasting%20in%20Angular/README.md)
