@@ -1,0 +1,13 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div {
+    border: 1px solid gray;
+    margin: 4px;
+    border-radius: 10px;
+    display: grid;
+    padding: 10px;
+    grid-template-rows: auto 1fr;
+}
