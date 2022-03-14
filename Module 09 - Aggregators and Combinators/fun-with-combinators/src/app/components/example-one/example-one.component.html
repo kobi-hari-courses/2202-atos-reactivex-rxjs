@@ -1,0 +1,16 @@
+<div class="words">
+    <div class="item" *ngFor="let word of words" 
+        (click)="word$.next(word)"
+        [class.selected]="(word$ | async) === word"
+    >{{word}}</div>
+</div>
+
+<div class="effects">
+    <div class="item" *ngFor="let effect of effects"
+        (click)="effect$.next(effect)"
+        [class.selected]="(effect$ | async) === effect"
+    >{{effect.name}}</div>
+</div>
+
+
+<h1>{{result$ | async | json}} </h1>

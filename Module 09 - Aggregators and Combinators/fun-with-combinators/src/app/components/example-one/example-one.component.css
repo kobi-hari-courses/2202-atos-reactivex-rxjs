@@ -1,0 +1,26 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.words, .effects {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: rgba(211, 211, 211, 0.568);
+}
+
+.item.selected {
+    background-color: rgba(211, 206, 140, 0.568);
+}

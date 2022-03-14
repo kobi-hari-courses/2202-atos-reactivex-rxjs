@@ -1,0 +1,47 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.directions, .steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+}
+
+.item:hover {
+    background-color: rgba(211, 211, 211, 0.568);
+}
+
+.item.selected {
+    background-color: rgba(211, 206, 140, 0.568);
+}
+
+.field {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background: lime;
+    border-radius: 50%;
+    transition: 0.5s;
+}
