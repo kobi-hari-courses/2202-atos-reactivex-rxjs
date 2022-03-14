@@ -9,3 +9,4 @@
 * [Module 06 - Hot and Cold Observables](Module%2006%20-%20Hot%20and%20Cold%20Observables/README.md)
 * [Module 07 - Hot and Cold Observables Contd](Module%2007%20-%20Hot%20and%20Cold%20Observables/README.md)
 * [Module 08 - Multicast operators in Angular](Module%2008%20-%20Multicasting%20in%20Angular/README.md)
+* [Module 09 - Aggregators and Combinators](Module%2009%20-%20Aggregators%20and%20Combinators/README.md)
